@@ -17,9 +17,12 @@ namespace UserApi.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "server=localhost;user=root;database=userdb;port=3306;password=sqldevenv;";
-            NCacheConfiguration.Configure("demoCache", DependencyType.Other);
+            var cacheId = "your-ncache-cache-id";
+            var connectionString = "your-mysql-connection-string";
+
+            NCacheConfiguration.Configure(cacheId, DependencyType.Other);
             NCacheConfiguration.ConfigureLogger();
+
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
             optionsBuilder.UseMySql(connectionString, serverVersion);
         }
