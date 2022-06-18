@@ -1,4 +1,4 @@
-﻿using Alachisoft.NCache.EntityFrameworkCore;
+using Alachisoft.NCache.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace UserApi.Models
